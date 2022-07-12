@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @extend %gothampro-regular;
+  color: $accent-color;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+a {
+  color: $accent-color;
+}
+
+.btn {
+  @extend %gothampro-bold;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  padding: 27px 44px;
+  border-radius: 90px;
+  line-height: 118.2%;
+  letter-spacing: 0.125em;
+  box-shadow: 0px 6px 21px rgba(104, 130, 245, 0.67);
+  background: linear-gradient(272.77deg, #864FF1 0%, #49B3F7 100%);
+}

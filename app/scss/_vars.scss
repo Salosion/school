@@ -1,5 +1,4 @@
-// $deffault: #243f4d;
-// $title: #191919;
+$accent-color: #243976;
 
 // %checkbox-hidden {
 //   width: 1px;
@@ -9,7 +8,22 @@
 //   position: absolute;
 // }
 
-// %dmsans-700 {
-//   font-family: 'DMSans-Bold', sans-serif;
-//   font-weight: 700;
-// }
+%gothampro-regular {
+  font-family: 'GothamPro', sans-serif;
+  font-weight: 400;
+}
+
+%gothampro-medium {
+  font-family: 'GothamPro-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%gothampro-bold {
+  font-family: 'GothamPro-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%alsschlangesans-bold {
+  font-family: 'ALSSchlangesans-Bold', sans-serif;
+  font-weight: 700;
+}

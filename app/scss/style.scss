@@ -4,4 +4,140 @@
 @import 'libs';
 @import 'global';
 
+.header {
+  // min-height: 100vh;
+  padding: 10px 0 60px;
+  background-image: url('../images/header/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/decor/header-decor-left.svg');
+    top: 23%;
+    left: 5%;
+    width: 239px;
+    height: 528px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/decor/header-decor-right.svg');
+    top: 18%;
+    right: 3%;
+    width: 291px;
+    height: 561px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E4E5EC;
+  }
+
+  &__top-phone {
+    @extend %gothampro-medium;
+    font-size: 20px;
+    line-height: 118%;
+    margin-right: 30px;
+  }
+
+  .btn {
+    padding: 23px 31px 21px 31px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 95px;
+  }
+
+  &__content {
+    font-size: 17px;
+    line-height: 165.2%;
+    background-image: url('../images/header/header-content-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  &__content-title {
+    @extend %alsschlangesans-bold;
+    font-size: 84px;
+    line-height: 103%;
+    margin-bottom: 40px;
+    max-width: 680px;
+
+    span {
+      color: #49B3F7;
+    }
+  }
+
+  &__content-descr {
+    max-width: 477px;
+    margin-bottom: 20px;
+  }
+
+  &__content-text {
+    @extend %gothampro-bold;
+    margin-bottom: 37px;
+    max-width: 477px;
+  }
+
+  .btn {
+    margin-bottom: 15px;
+  }
+
+  &__content-social {
+    display: flex;
+    align-items: center;
+    span {
+      color: #737373;
+    }
+  }
+
+  &__content-link {
+    margin-left: 15px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item+.menu__list-item {
+    margin-left: 30px;
+  }
+
+  &__list-link {
+    @extend %gothampro-medium;
+    font-size: 14px;
+    line-height: 118%;
+  }
+}
+
+.user__nav {
+  @extend %gothampro-medium;
+  font-size: 14px;
+  padding-left: 26px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/user.svg');
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 18px;
+    top: -2px;
+    left: 0;
+  }
+}
+
 @import 'media';
