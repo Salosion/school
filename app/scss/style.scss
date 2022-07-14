@@ -47,10 +47,6 @@
     margin-right: 30px;
   }
 
-  .btn {
-    padding: 23px 31px 21px 31px;
-  }
-
   &__box {
     display: flex;
     justify-content: space-between;
@@ -215,6 +211,99 @@
   }
 }
 
+.benefits {
+  padding: 60px 0 55px;
+  background-color: $bg;
+
+  &__title {
+    text-align: left;
+    margin-bottom: 75px;
+  }
+
+  &__items {
+    position: relative;
+    margin-bottom: 30px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/benefits-bg.png');
+      background-repeat: no-repeat;
+      background-position: center right;
+      width: 594px;
+      height: 388px;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 55px;
+    max-width: 530px;
+    padding-left: 66px;
+    position: relative;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #fff;
+      box-shadow: 5px 15px 40px rgba(30, 35, 66, 0.15);
+      border-radius: 25px;
+      padding: 13px 36px 13px 66px;
+
+      .benefits__item-title {
+        background: linear-gradient(272.77deg, #864FF1 0%, #49B3F7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item--one::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/decor/decor-1.svg');
+    width: 31px;
+    height: 44px;
+    top: 35px;
+    left: 17px;
+  }
+
+  &__item--two::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/decor/decor-2.svg');
+    width: 45px;
+    height: 35px;
+    top: 25px;
+    left: 10px;
+  }
+
+  &__item--three::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/decor/decor-3.svg');
+    width: 44px;
+    height: 38px;
+    top: 25px;
+    left: 10px;
+  }
+
+  &__item-title {
+    @extend %gothampro-medium;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  &__item-text {
+    text-align: left;
+    line-height: 130%;
+  }
+}
 
 
 @import 'media';
