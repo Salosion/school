@@ -62,3 +62,30 @@ a {
     margin-left: 15px;
   }
 }
+
+.offer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EFF2FD;
+  border-radius: 25px;
+  padding: 23px 47px 20px 55px;
+
+  &__box-img {
+    margin-top: -80px;
+  }
+
+  &__title {
+    @extend %alsschlangesans-bold;
+    font-size: 32px;
+    line-height: 103.2%;
+    margin-bottom: 5px;
+    max-width: 524px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 130%;
+    max-width: 520px;
+  }
+}
