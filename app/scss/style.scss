@@ -545,4 +545,121 @@
   }
 }
 
+.pricing {
+  padding: 60px 0 100px;
+  background-color: $bg;
+
+  &__title {
+    margin-bottom: 135px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__item {
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px 25px 0px 50px;
+    padding: 50px 35px 25px 40px;
+    position: relative;
+  }
+
+  &__item--one::after {
+    content: '';
+    position: absolute;
+    width: 131px;
+    height: 199px;
+    right: -45px;
+    bottom: 0;
+    background-image: url('../images/pricing/pricing-girl-1.png');
+  }
+
+  &__item--two::after {
+    content: '';
+    position: absolute;
+    width: 125px;
+    height: 271px;
+    right: -45px;
+    bottom: 0;
+    background-image: url('../images/pricing/pricing-girl-2.png');
+  }
+
+  &__item--three::after {
+    content: '';
+    position: absolute;
+    width: 125px;
+    height: 349px;
+    right: -45px;
+    bottom: 0;
+    background-image: url('../images/pricing/pricing-girl-3.png');
+  }
+
+  &__item-price {
+    @extend %gothampro-medium;
+    position: absolute;
+    top: -15%;
+    left: 10%;
+    color: #EBF8F8;
+    font-size: 36px;
+    line-height: 141%;
+    background: linear-gradient(272.77deg, #864FF1 0%, #49B3F7 100%);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    padding: 25px 30px 25px 30px;
+
+    span {
+      @extend %gothampro-regular;
+      margin-left: -10px;
+      color: #E9E8FA;
+      font-size: 14px;
+      line-height: 141%;
+    }
+  }
+
+  &__item-title {
+    @extend %gothampro-medium;
+    font-size: 20px;
+    line-height: 103.2%;
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  &__list {
+    max-width: 215px;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 103%;
+    margin-bottom: 20px;
+  }
+
+  &__item-img {
+    margin-right: 8px;
+  }
+
+  &__item-btn {
+    background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+    box-shadow: 0px 4px 20px #648CEB;
+    border-radius: 50px;
+    font-size: 12px;
+    line-height: 100%;
+    color: #EBF8F8;
+    padding: 10px 45px 10px 45px;
+    border: none;
+  }
+}
+
 @import 'media';
