@@ -432,4 +432,117 @@
   }
 }
 
+.footer {
+  background-color: $bg;
+  padding: 40px 0 15px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__classes-title,
+  &__documents-title,
+  &__social-title {
+    @extend %gothampro-medium;
+    font-size: 20px;
+    line-height: 103%;
+    margin-bottom: 15px;
+  }
+
+  &__documents-title,
+  &__social-title {
+    margin-bottom: 20px;
+  }
+
+  &__classes-item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__classes-link,
+  &__documents-link {
+    font-size: 14px;
+    line-height: 193%;
+  }
+
+  &__documents-link {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/license.svg');
+      width: 21px;
+      height: 27px;
+      top: -4px;
+      left: 0;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+  }
+
+  &__social-item {
+    transition: all .3s;
+
+    & + .footer__social-item {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  &__contacts {
+    max-width: 250px;
+  }
+
+  &__contacts-address,
+  &__contacts-phone {
+    font-size: 16px;
+    line-height: 169%;
+    padding-left: 54px;
+    margin-bottom: 15px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/map.svg');
+      width: 46px;
+      height: 46px;
+      top: 5px;
+      left: 0;
+    }
+  }
+
+  &__contacts-phone {
+    margin-top: 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/phone.svg');
+      width: 46px;
+      height: 46px;
+      top: -10px;
+      left: 0;
+    }
+  }
+
+  &__info {
+    font-size: 8px;
+    line-height: 203%;
+    max-width: 210px;
+    color: #9299AF;
+  }
+}
+
 @import 'media';
