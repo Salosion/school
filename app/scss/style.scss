@@ -350,7 +350,7 @@
 
   &__online {
     padding: 38px 53px 38px 82px;
-    background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+    background: linear-gradient(26.5deg, $text 16.72%, #789CF1 95.45%);
     border-radius: 15px;
     color: #F8F9FF;
     max-height: 490px;
@@ -627,7 +627,7 @@
   }
 
   &__item-text {
-    background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+    background: linear-gradient(26.5deg, $text 16.72%, #789CF1 95.45%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     max-width: 200px;
@@ -651,7 +651,7 @@
   }
 
   &__item-btn {
-    background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+    background: linear-gradient(26.5deg, $text 16.72%, #789CF1 95.45%);
     box-shadow: 0px 4px 20px #648CEB;
     border-radius: 50px;
     font-size: 12px;
@@ -710,7 +710,7 @@
     line-height: 100%;
   }
 
-  &__items{
+  &__items {
     margin-bottom: 200px;
   }
 
@@ -761,10 +761,10 @@
 
   &__item-link {
     position: relative;
-    color: #4271DF;
+    color: $text;
     font-size: 16px;
     line-height: 130%;
-    border-bottom: 1px solid #4271DF;
+    border-bottom: 1px solid $text;
     padding-bottom: 0px;
   }
 
@@ -788,4 +788,170 @@
 .prev-arrow {
   left: 47%;
 }
+
+.accordion {
+  padding-bottom: 80px;
+
+  &__item {
+    background: #EFF2FD;
+    border-radius: 25px;
+    filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-bottom: 30px;
+    padding: 44px 47px 44px 58px;
+  }
+
+  &__item-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  &__item-label {
+    @extend %alsschlangesans-bold;
+    font-size: 32px;
+    line-height: 100%;
+    display: block;
+    position: relative;
+
+    &::after {
+      content: '';
+      transition: all .3s;
+      position: absolute;
+      background-image: url('../images/icons/accordion-open.svg');
+      right: 0;
+      top: -10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  &__item-text {
+    display: none;
+    font-size: 16px;
+    line-height: 130%;
+    margin: 40px 0 25px;
+    max-width: 917px;
+
+    &:last-child {
+      margin-bottom: 100px;
+    }
+
+    span {
+      @extend %gothampro-medium;
+    }
+  }
+
+  &__item-input {
+    transition: all .3s;
+  }
+
+  &__item-input:checked~.accordion__item-text {
+    display: block;
+  }
+
+  &__item-input:checked+.accordion__item-label {
+    &::after {
+      transition: all .3s;
+      background-image: url('../images/icons/accordion-close.svg');
+    }
+  }
+}
+
+.form-wrapper {
+  padding-bottom: 100px;
+}
+
+.form__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__box {
+  padding: 96px 0 8px 114px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/decor/form-decor.svg');
+    width: 429px;
+    height: 520px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.form {
+  background-color: #fff;
+  box-shadow: 5px 15px 40px rgba(30, 35, 66, 0.15);
+  border-radius: 15px;
+  padding: 35px 20px;
+  max-width: 350px;
+
+  &__input {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 32px;
+    max-width: 300px;
+    width: 100%;
+    height: 56px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+
+    &::placeholder {
+      padding: 16px 8px;
+      font-size: 13px;
+      line-height: 16px;
+      color: #9E9E9E;
+    }
+  }
+
+  &__btn {
+    @extend %gothampro-bold;
+    background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+    border-radius: 32px;
+    padding: 22px 33px 22px 40px;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 118%;
+    letter-spacing: 0.12em;
+  }
+
+  &__link {
+    display: block;
+    max-width: 308px;
+    font-size: 13px;
+    line-height: 123%;
+    color: #9E9E9E;
+    text-align: center;
+  }
+
+  &__info-title {
+    margin-bottom: 10px;
+
+    span {
+      color: $text;
+    }
+  }
+
+  &__info-text {
+    margin: 0 auto;
+    max-width: 505px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 103%;
+  }
+}
+
 @import 'media';
