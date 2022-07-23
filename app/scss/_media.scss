@@ -3,7 +3,7 @@
     padding-bottom: 50px;
 
     &__top-phone {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     &__content {
@@ -35,21 +35,29 @@
     &__item-text {
       max-width: 169px;
     }
-  }
 
-  .offer {
-    padding: 19px 20px 18px 30px;
+    .offer {
+      padding: 19px 20px 18px 183px;
 
-    &__title {
-      font-size: 26px;
-      margin-bottom: 15px;
+      &__title {
+        font-size: 26px;
+        margin-bottom: 15px;
+      }
+
+      &__text {
+        font-size: 14px;
+        max-width: 432px;
+      }
     }
 
-    &__text {
-      font-size: 14px;
-      max-width: 432px;
+    .offer--girl::before {
+      left: 30px;
+      width: 132px;
+      height: 199px;
+      background-size: cover;
     }
   }
+
 
   .lessons {
     .title {
@@ -88,8 +96,8 @@
 
     &__items {
       &::after {
-        max-width: 480px;
-        max-height: 313px;
+        width: 480px;
+        height: 313px;
         top: 38%;
         left: 46%;
         background-size: cover;
@@ -119,16 +127,16 @@
     &__items {
 
       &::after {
-        max-width: 228px;
-        max-height: 210px;
+        width: 228px;
+        height: 210px;
         left: 12px;
         top: 42px;
         background-size: cover;
       }
 
       &::before {
-        max-width: 228px;
-        max-height: 213px;
+        width: 228px;
+        height: 213px;
         right: 5px;
         top: 48%;
         background-size: cover;
@@ -185,6 +193,27 @@
     &__item-text {
       max-width: 265px;
     }
+
+    .offer {
+      padding: 19px 20px 18px 183px;
+
+      &__title {
+        font-size: 26px;
+        margin-bottom: 15px;
+      }
+
+      &__text {
+        font-size: 14px;
+        max-width: 432px;
+      }
+    }
+
+    .offer--boy::before {
+      left: 30px;
+      width: 138px;
+      height: 209px;
+      background-size: cover;
+    }
   }
 
   .pricing {
@@ -196,24 +225,24 @@
     }
 
     &__item--one::after {
-      max-width: 128px;
-      max-height: 195px;
+      width: 128px;
+      height: 195px;
       background-size: cover;
       right: -35px;
       z-index: 1;
     }
 
     &__item--two::after {
-      max-width: 114px;
-      max-height: 248px;
+      width: 114px;
+      height: 248px;
       background-size: cover;
       right: -35px;
       z-index: 1;
     }
 
     &__item--three::after {
-      max-width: 109px;
-      max-height: 305px;
+      width: 109px;
+      height: 305px;
       background-size: cover;
       right: -32px;
       z-index: 1;
@@ -274,8 +303,8 @@
       padding: 76px 0 0 75px;
 
       &::before {
-        max-width: 331px;
-        max-height: 402px;
+        width: 331px;
+        height: 402px;
         background-size: cover;
       }
     }
@@ -321,15 +350,360 @@
       font-size: 14px;
 
       &::before {
-        max-width: 40px;
-        max-height: 40px;
+        width: 40px;
+        height: 40px;
         background-size: cover;
       }
     }
   }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .header {
+    padding-bottom: 30px;
+
+    &__top-phone {
+      font-size: 16px;
+    }
+
+    &__box {
+      margin-bottom: 50px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: none;
+    }
+
+    &__content-title {
+      font-size: 60px;
+      margin-bottom: 40px;
+      max-width: 505px;
+      text-align: center;
+    }
+
+    &__content-descr,
+    &__content-text {
+      text-align: center;
+      max-width: 562px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .header-social {
+    font-size: 14px;
+  }
+
+  .education {
+    padding-top: 60px;
+
+    .title {
+      font-size: 38px;
+    }
+
+    &__items {
+      flex-wrap: wrap;
+      grid-gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    &__item-box {
+      margin-bottom: 20px;
+    }
+
+    &__item-text {
+      max-width: 165px;
+    }
+
+
+    .offer {
+      padding: 25px 25px 18px 225px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &__title {
+        font-size: 24px;
+      }
+
+      &__text {
+        font-size: 14px;
+        max-width: 439px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        margin-bottom: 15px;
+      }
+    }
+
+    .offer--girl::before {
+      left: 23px;
+      top: -15px;
+      width: 168px;
+      height: 253px;
+    }
+  }
+
+  .lessons {
+    .title {
+      font-size: 38px;
+      max-width: 622px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    &__items {
+      background-image: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      grid-gap: 40px;
+    }
+
+    &__item {
+      display: block;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    &__item-img {
+      max-width: 180px;
+      max-height: 150px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    &__item-title {
+      text-align: center;
+      font-size: 17px;
+      line-height: 103%;
+    }
+
+    &__item-text {
+      text-align: center;
+      font-size: 14px;
+      max-width: 324px;
+    }
+  }
+
+  .benefits {
+    &__title {
+      text-align: center;
+      font-size: 38px;
+    }
+
+    &__items {
+      &::after {
+        max-width: 320px;
+        max-height: 208px;
+        top: 80%;
+        left: 55%;
+      }
+    }
+
+    &__item {
+      max-width: 100%;
+    }
+
+    &__item-text {
+      max-width: 585px;
+    }
+
+    &__item-text--size {
+      max-width: 350px;
+    }
+  }
+
+  .comparison {
+    .title {
+      font-size: 38px;
+    }
+
+    &__items::after,
+    ::before {
+      background-image: none;
+    }
+  }
+
+  .info {
+    &__title {
+      font-size: 38px;
+      max-width: 630px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px 88px;
+      margin-bottom: 70px;
+    }
+
+    &__item-img {
+      max-width: 150px;
+      max-height: 150px;
+    }
+
+    &__item-title {
+      font-size: 18px;
+    }
+
+    &__item-text {
+      max-width: 300px;
+    }
+
+    .offer {
+      padding: 25px 25px 18px 225px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &__title {
+        font-size: 24px;
+      }
+
+      &__text {
+        font-size: 14px;
+        max-width: 439px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        margin-bottom: 15px;
+      }
+    }
+
+    .offer--boy::before {
+      left: 23px;
+      top: -15px;
+      width: 168px;
+      height: 253px;
+    }
+  }
+
+  .pricing {
+    &__title {
+      font-size: 38px;
+    }
+
+    &__items {
+      grid-gap: 100px 60px;
+    }
+  }
+
+  .certificate {
+    padding-top: 40px;
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__info {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 450px;
+      font-size: 38px;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      text-align: center;
+      max-width: 550px;
+      font-size: 20px;
+    }
+
+    &__img {
+      max-width: 336px;
+      max-height: 296px;
+    }
+  }
+
+  .accordion {
+    &__item {
+      padding: 30px 47px 30px 55px;
+      margin-bottom: 20px;
+    }
+
+    &__item-label {
+      font-size: 24px;
+
+      &::after {
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+      }
+    }
+
+    &__item-text {
+      margin-top: 30px;
+    }
+  }
+
+  .form-wrapper {
+    padding-bottom: 80px;
+  }
+
+  .form {
+    &__inner {
+      flex-direction: column-reverse;
+    }
+
+    &__box {
+      margin: 0 auto;
+    }
+
+    &__info-title {
+      font-size: 38px;
+    }
+
+    &__info-text {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 530px;
+      margin-bottom: 30px;
+    }
+
+    &__info-img {
+      display: none;
+    }
+  }
+
+  .footer {
+    &__inner {
+      grid-gap: 30px 65px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &__social-img {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__contacts {
+      display: flex;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    &__contacts-address {
+      margin-right: 110px;
+    }
+
+    &__info {
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+}
 
 @media (max-width: 480px) {}
 
