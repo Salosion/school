@@ -1063,6 +1063,183 @@
   }
 }
 
-@media (max-width: 415px) {}
+@media (max-width: 415px) {
+  .header {
+    padding-bottom: 25px;
+
+    &__content {
+      margin-top: 25px;
+    }
+
+    &__content-descr,
+    &__content-text {
+      max-width: 335px;
+    }
+
+    &__content-text {
+      margin-bottom: 25px;
+    }
+  }
+
+  .header-social {
+    margin-left: -40px;
+
+    &__link {
+      margin-left: 10px;
+    }
+  }
+
+  .education {
+    padding: 50px 0;
+
+    &__items {
+      grid-gap: 30px 0;
+    }
+
+    &__item-box {
+      margin-bottom: 0;
+    }
+
+    .offer {
+      padding-left: 140px;
+
+      &__title {
+        max-width: 217px;
+        margin-bottom: 10px;
+      }
+
+      &__text {
+        font-size: 14px;
+        max-width: 210px;
+      }
+
+      .btn {
+        margin-left: -70px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .lessons {
+    padding-bottom: 50px;
+
+    &__item-text {
+      max-width: 310px;
+    }
+  }
+
+  .benefits {
+    &__title {
+      margin: 0 auto;
+      margin-bottom: 30px;
+      max-width: 268px;
+    }
+
+    &__item {
+      margin-bottom: 15px;
+    }
+
+    &__item-title {
+      font-size: 17px;
+      max-width: 280px;
+    }
+
+    &__item-text {
+      max-width: 280px;
+    }
+  }
+
+  .comparison {
+    padding: 50px 0;
+  }
+
+  .info {
+    padding: 0 0 50px;
+
+    &__title {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+
+    .offer {
+      padding-left: 140px;
+
+      &__title {
+        max-width: 217px;
+        margin-bottom: 10px;
+      }
+
+      &__text {
+        font-size: 14px;
+        max-width: 210px;
+      }
+
+      .btn {
+        margin-left: -70px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .pricing {
+    padding: 30px 0 30px;
+  }
+
+  .certificate {
+    padding: 50px 0;
+
+    &__title {
+      max-width: 270px;
+    }
+
+    &__text {
+      font-size: 15px;
+      max-width: 310px;
+    }
+  }
+
+  .accordion {
+    padding-bottom: 50px;
+
+    &__item {
+      padding: 22px 47px 22px 35px;
+    }
+
+    &__item-label {
+      max-width: 270px;
+    }
+  }
+
+  .form-wrapper {
+    padding-bottom: 50px;
+  }
+
+  .form {
+    &__info-text {
+      max-width: 315px;
+      font-size: 15px;
+    }
+  }
+
+  .footer {
+    &__inner {
+      grid-gap: 30px 52px;
+    }
+    &__classes {
+      display: none;
+    }
+    &__contacts {
+      flex-direction: column;
+    }
+    &__contacts-address {
+      font-size: 15px;
+      margin-right: 0;
+    }
+
+    &__contacts-phone {
+      font-size: 15px;
+    }
+  }
+}
 
 @media (max-width: 320px) {}
