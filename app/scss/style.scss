@@ -87,6 +87,10 @@
   }
 }
 
+.menu__btn {
+  display: none;
+}
+
 .menu {
   &__list {
     display: flex;
