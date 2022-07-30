@@ -372,7 +372,7 @@
     }
 
     &__box {
-      margin-bottom: 50px;
+      margin-bottom: 15px;
     }
 
     &__content {
@@ -716,7 +716,25 @@
     padding-bottom: 50px;
 
     &__box {
-      display: none;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      right: 0;
+      background: #EFF2FD;
+      box-shadow: 5px 15px 40px rgba(30, 35, 66, 0.15);
+      border-radius: 0px 0px 15px 15px;
+      padding: 55px 0 40px;
+      flex-direction: column;
+      transform: translateY(-200%);
+      transition: all .5s;
+      margin: 0;
+    }
+
+    .header__box--active {
+      border-top: 1px solid #e4e5ec;
+      transform: translateY(0%);
+      transition: all .5s;
+      background-color: #fff;
     }
 
     &__top {
@@ -729,6 +747,10 @@
 
     &__btn {
       display: none;
+    }
+
+    &__content {
+      margin-top: 75px;
     }
 
     &__content-title {
@@ -748,16 +770,46 @@
     }
   }
 
-  .menu__btn {
-    width: 43px;
-    height: 43px;
-    background-color: transparent;
-    background: linear-gradient(272.77deg, #864FF1 0%, #49B3F7 100%);
-    box-shadow: 0px 6px 21px rgba(104, 130, 245, 0.67);
-    border-radius: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .menu {
+    &__list {
+      flex-direction: column;
+      transition: all .5s;
+    }
+
+    &__list-link {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      line-height: 100%;
+    }
+
+    &__list-item {
+      margin-bottom: 20px;
+
+      &+.menu__list-item {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__btn {
+      width: 43px;
+      height: 43px;
+      background-color: transparent;
+      background: linear-gradient(272.77deg, #864FF1 0%, #49B3F7 100%);
+      box-shadow: 0px 6px 21px rgba(104, 130, 245, 0.67);
+      border-radius: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .user__nav {
+    margin: 0 auto;
   }
 
   .education {
@@ -1065,9 +1117,8 @@
 @media (max-width: 415px) {
   .header {
     padding-bottom: 25px;
-
     &__content {
-      margin-top: 25px;
+      margin-top: 75px;
     }
 
     &__content-descr,
@@ -1249,6 +1300,10 @@
     .logo {
       width: 120px;
       height: 34px;
+    }
+
+    &__content {
+      margin-top: 80px;
     }
 
     &__content-title {
@@ -1434,10 +1489,12 @@
       justify-content: center;
       align-items: center;
     }
+
     &__classes,
     &__documents {
       margin-bottom: 20px;
     }
+
     &__contacts-address,
     &__contacts-phone {
       font-size: 14px;

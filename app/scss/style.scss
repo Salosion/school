@@ -5,7 +5,7 @@
 @import 'global';
 
 .header {
-  padding: 10px 0 60px;
+  padding-bottom: 60px;
   background-image: url('../images/header/header-bg.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
@@ -34,12 +34,24 @@
     z-index: -1;
   }
 
+  &__inner-box {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 15px;
+    background-color: #fff;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
+    padding: 10px 0 20px;
     border-bottom: 1px solid #E4E5EC;
+    max-width: 1170px;
+    margin: 0 auto;
   }
 
   &__top-phone {
@@ -52,7 +64,8 @@
   &__box {
     display: flex;
     justify-content: space-between;
-    margin: 15px 0 95px;
+    max-width: 1170px;
+    margin: 15px auto;
   }
 
   &__content {
@@ -61,6 +74,7 @@
     background-image: url('../images/header/header-content-bg.png');
     background-repeat: no-repeat;
     background-position: bottom right;
+    margin-top: 225px;
   }
 
   &__content-title {
@@ -695,6 +709,16 @@
     font-size: 16px;
     line-height: 130%;
   }
+}
+
+.slick-slide {
+  max-width: 672px;
+  width: 100%;
+}
+
+.slick-cloned {
+  max-width: 672px;
+  width: 100%;
 }
 
 .slick-arrow {
